@@ -12,6 +12,16 @@ tar -xvf spark-2.4.5-bin-hadoop2.7.tgz
 ```
  mv spark-2.4.5-bin-hadoop2.7 spark
 ```
+### add environtment spark to basrc/profile
+```
+sudo nano .bashrc
+```
+```
+export SPARK_HOME=/home/ddi/spark
+export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+export PYSPARK_PYTHON=/usr/bin/python3
+```
+
 
 ### Start master spark
 <img width="763" alt="image" src="https://user-images.githubusercontent.com/77326619/195049033-373372f7-493c-4c5c-a819-4fddb823316d.png">
@@ -27,3 +37,11 @@ start-master.sh
 ```
 start-slave.sh spark://ddi-spark:7077
 ```
+
+### open spark-shell
+```
+spark-shell
+```
+<img width="666" alt="image" src="https://user-images.githubusercontent.com/77326619/195049621-a60088b7-6658-4314-929e-7cc4ec6e10e7.png">
+
+
